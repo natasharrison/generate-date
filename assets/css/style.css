@@ -1,0 +1,13 @@
+:root {
+  --bold-color: #f9876f;
+  --secondary-color: #596c73;
+  --tertiary-color: #b1bdb9;
+  --neutral-color: #f2f2f3;
+}
+
+header {
+  background-image: linear-gradient(#b1bdb9, #f2f2f3);
+  color: var(--bold-color);
+  font-weight: bold;
+  text-shadow: 2px 2px #596c73;
+}
