@@ -24,7 +24,7 @@ var getCocktail = function(){
 
 // api fetch for movie title - need to fix API link 
 var getMovie = function(){
-    fetch('https://api.themoviedb.org/3/movie/lists?api_key=6e946e614057104bc3c7b504faf122c5&language=en-US&page=1').then(function(response){
+    fetch('https://api.themoviedb.org/3/movie/550?api_key=6e946e614057104bc3c7b504faf122c5&language=en-US&page=1').then(function(response){
     console.log(response);
     return response.json()
 })
