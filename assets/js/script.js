@@ -22,7 +22,7 @@ var getCocktail = function(){
     })
 };
 
-// api fetch for movie title - need to fix API link 
+// api fetch for movie title - need to fix API link - currently just showing Fight Club
 var getMovie = function(){
     fetch('https://api.themoviedb.org/3/discover/movie/random/?api_key=6e946e614057104bc3c7b504faf122c5&language=en-US&popularity.asc').then(function(response){
     console.log(response);
@@ -39,3 +39,16 @@ getRecipe();
 getCocktail();
 getMovie();
 
+// add eventListener for the clicks on each button 
+
+// display function for dinner recipe
+    //display photo of recipe 
+    // display title of recipe 
+    // display recipe ingredients and instructions
+
+// display function for cocktail recipe 
+    //display photo of recipe 
+    // display title of recipe 
+    // display recipe ingredients and instructions
+
+// localStorage function to save generated recipes 
