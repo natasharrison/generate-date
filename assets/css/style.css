@@ -46,7 +46,9 @@ main {
 .recipe-gen {
   margin-left: 200px;
 }
-
+.store-item{
+  text-align: center;
+}
 footer {
   text-align: center;
   font-size: 15px;

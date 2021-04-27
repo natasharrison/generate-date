@@ -51,17 +51,14 @@
         </section>
         <!-- main function -->
         <section id="music" class="music-gen">
-            <article class="container" >
+            <article class="container-md">
                 <div id="movie" class="six columns">
-                    <input type="image" src="./assets/images/movie.jpg" alt="movie image" height="250px">
+                    <input type="image" src="./assets/images/movie.jpg" alt="movie image" class="six columns">
                     <input class="button-primary" type="submit" value="Movie?">
                 </div>
-                <br><br><br>
                 <div id="music" class="six columns">
-                    <input type="image"  src="./assets/images/music.jpg" alt="music image" height="250px">
+                    <input type="image"  src="./assets/images/music.jpg" alt="music image" class="six columns">
                     <input class="button-primary" type="submit" value="Music">
-
-                    <!-- Need to make sure both images are responsive -->
                 </div>
             </article>
             <article>
@@ -79,7 +76,7 @@
                         <input type="checkbox" class="filled-in" checked="checked" />
                         <span id="cocktail">Include Cocktail</span>
                     </label>
-                    <a class="button" href="#">Let's Eat!</a>
+                    <a class="button" id="get-recipe">Let's Eat!</a>
                 </p>
 
             </article>
@@ -91,7 +88,7 @@
         </section>
 
         <!-- display image and link of generated dinner recipe -->
-        <Section class="recipe-info">
+        <Section id="recipe-info">
             <article class="recipe-ingredients"></article>
             <article class="recipe-steps"></article>
         </Section>
@@ -102,7 +99,10 @@
             <article class="cocktail-recipe"></article>
 
         </section>
-
+        <section class="store-item">
+            <input type="submit" value="Save for later !" class="save-recipe">
+            
+        </section>
         <!-- favorites -->
         <h3>Favorites</h3>
         <!-- add buttons to past favorites from localStorage -->
@@ -115,6 +115,7 @@
         <p> Created by Natasha Harrison @natasharrison + Samuel Odubamowo @Wsamuell </p>
         <!-- have to include a back link to Movie Database API -->
     </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 
