@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header class="row">    
+    <header class="row">
         <div class="six columns" id="title">
             <!-- i need to incorporate "font-family: 'Dancing Script', cursive"  into the heading -->
             <h2 href="./index.html">You <span class="plus">+</span> Me</h2>
@@ -56,7 +56,7 @@
                     <input class="button-primary" type="submit" value="Movie?">
                 </div>
                 <div id="music" class="six columns">
-                    <input type="image"  src="./assets/images/music.jpg" alt="music image" class="six columns">
+                    <input type="image" src="./assets/images/music.jpg" alt="music image" class="six columns">
                     <input class="button-primary" type="submit" value="Music">
                 </div>
             </article>
@@ -66,13 +66,13 @@
             </article>
         </section>
 
-                <!-- display title of generated movie -->
+        <!-- display title of generated movie -->
         <section id="recipe" class="recipe-gen">
             <article>
                 <h3>I'm ready for a Magical Night</h3>
                 <p class="option">
                     <label>
-                        <input type="checkbox" class="filled-in" checked="checked" />
+                        <input type="checkbox" class="filled-in" checked="checked" id="accept" />
                         <span id="cocktail">Include Cocktail</span>
                     </label>
                     <a class="button" id="get-recipe">Let's Eat!</a>
@@ -88,19 +88,24 @@
 
         <!-- display image and link of generated dinner recipe -->
         <Section id="recipe-info">
-            <article class="recipe-ingredients"></article>
-            <article class="recipe-steps"></article>
+            <p class="recipe-img" id="recipe-img"></p>
+            <p class="recipe-title" id="recipe-title"></p>
+            <p class="recipe-summary" id="recipe-summary"></p>
+            <p class="recipe-ingredients" id="recipe-ingredients"></p>
+            <p class="recipe-steps" id="recipe-steps"></p>
         </Section>
 
         <!-- display image and link of generated cocktail recipe -->
         <section class="cocktail-info">
-            <article class="cocktail-img"></article>
-            <article class="cocktail-recipe"></article>
+            <article class="cocktail-img" id="cocktail-img"></article>
+            <article class="cocktail-title" id="cocktial-title"></article>
+            <article class="cocktail-ingredients" id="cocktail-ingredients"></article>
+            <article class="cocktail-recipe" id="cocktail-recipe"></article>
 
         </section>
         <section class="store-item">
             <input type="submit" value="Save for later !" class="save-recipe">
-            
+
         </section>
         <!-- favorites -->
         <h3>Favorites</h3>
