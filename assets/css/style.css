@@ -3,7 +3,7 @@
   padding: 0;
   text-decoration: none;
   color: inherit;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 :root {
@@ -16,24 +16,24 @@
 header {
   background-image: url("../images/header-bg.jpg");
   background-size: cover;
-  color: var(--bold-color);
+  color: var(--neutral-color);
   font-weight: bold;
   /* text-shadow: 2px 2px #596c73; */
   padding: 20px;
   background-position: center;
 }
-span{
+span {
   color: gold;
 }
 main {
   padding: 20px;
-  
 }
 .header-description {
   padding: 100px;
   font-style: italic;
 }
-.how-to-title, #get-started {
+.how-to-title,
+#get-started {
   text-align: center;
 }
 #get-started {
@@ -46,7 +46,7 @@ main {
 .recipe-gen {
   margin-left: 200px;
 }
-.store-item{
+.store-item {
   text-align: center;
 }
 footer {
