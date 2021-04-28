@@ -51,30 +51,38 @@
         <!-- main function -->
         <!-- <section id="music" class="music-gen">
             <article class="container-md">
-                <div id="music" class="six columns">
+                <div id="music" class="12 columns">
                     <input type="image" src="./assets/images/music.jpg" alt="music image" class="six columns">
-                    <input class="button-primary" type="submit" value="Music">
                 </div>
             </article>
         </section> -->
 
         <section id="recipe" class="recipe-gen">
-            <article>
+            <article class="container">
+                <input type="checkbox" class="drink-checkbox" id="drink-checkbox">Lets drink!
                 <a class="button" id="get-recipe">Surprise Me!</a>
             </article>
         </section>
 
         <!-- display generated dinner recipe -->
-        <Section id="recipe-info">
-            <p class="recipe-img" id="recipe-img"><span style="display:inline"><img src=""></span></p>
+        <!-- the ingredients keep adding up together instead of being deleted -->
+        
+        <Section id="recipe-info" >
+            <h3>Chow</h3>
             <p class="recipe-title" id="recipe-title"></p>
-            <p class="recipe-summary" id="recipe-summary"></p>
-            <ul class="recipe-ingredients" id="recipe-ingredients"></ul>
-            <p class="recipe-steps" id="recipe-steps"></p>
+            <div class="row" id="recipe-margin">
+                <p id="recipe-img"><img class="six columns" src="" alt="" id="main-recipe-img"></p>
+                <p class="six columns" id="recipe-summary"></p>
+            </div>
+            <div class="row" id="recipe-margin">
+                <ul class="six columns" id="recipe-ingredients"></ul>
+                <p class="six columns" id="recipe-steps"></p>
+            </div>
         </Section>
         <br>
         <!-- display generated cocktail recipe -->
-        <section class="cocktail-info">
+        <section class="cocktail-info" id="cocktail">
+            <h3>Cocktail</h3>
             <p class="cocktail-img" id="cocktail-img"><img src=""></p>
             <p class="cocktail-title" id="cocktail-title"></p>
             <ul class="cocktail-ingredients" id="cocktail-ingredients"></ul>
@@ -96,7 +104,8 @@
         <p>©2021 You + Me </p>
         <p> Created by Natasha Harrison @natasharrison + Samuel Odubamowo @Wsamuell </p>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
 
