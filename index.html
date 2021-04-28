@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- need to add a link to Skeleton instead of Bootstrap -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
@@ -16,7 +15,7 @@
 </head>
 
 <body>
-    <header class="row">    
+    <header class="row">
         <div class="six columns" id="title">
             <!-- i need to incorporate "font-family: 'Dancing Script', cursive"  into the heading -->
             <h2 href="./index.html">You <span class="plus">+</span> Me</h2>
@@ -43,65 +42,50 @@
             <h3 class="how-to-title">How it works</h3>
             <p>Its as simple as it sounds</p>
             <ol class="container">
-                <li class="four columns">In the mood for a Movie or some Music?</li>
+                <li class="four columns">In the mood for some Music?</li>
                 <li class="four columns">Generate your food choice</li>
                 <li class="four columns">We talking cocktail?</li>
             </ol>
-            <h5 id="get-started" class="twelve columns">Lets get you started!</h5>
+            <h5 id="get-started" class="twelve columns">Let's get you started!</h5>
         </section>
         <!-- main function -->
-        <section id="music" class="music-gen">
+        <!-- <section id="music" class="music-gen">
             <article class="container-md">
-                <div id="movie" class="six columns">
-                    <input type="image" src="./assets/images/movie.jpg" alt="movie image" class="six columns">
-                    <input class="button-primary" type="submit" value="Movie?">
-                </div>
                 <div id="music" class="six columns">
-                    <input type="image"  src="./assets/images/music.jpg" alt="music image" class="six columns">
+                    <input type="image" src="./assets/images/music.jpg" alt="music image" class="six columns">
                     <input class="button-primary" type="submit" value="Music">
                 </div>
             </article>
-            <article>
-                <!-- javascript choice of music or movie -->
-                <!-- another cool feature would be letting music and movie fade away once choice is made -->
-            </article>
-        </section>
+        </section> -->
 
-                <!-- display title of generated movie -->
         <section id="recipe" class="recipe-gen">
             <article>
-                <h3>I'm ready for a Magical Night</h3>
-                <p class="option">
-                    <label>
-                        <input type="checkbox" class="filled-in" checked="checked" />
-                        <span id="cocktail">Include Cocktail</span>
-                    </label>
-                    <a class="button" id="get-recipe">Let's Eat!</a>
-                </p>
-
+                <a class="button" id="get-recipe">Surprise Me!</a>
             </article>
-
         </section>
 
-        <section class="recipe-img">
-            <article></article>
-        </section>
-
-        <!-- display image and link of generated dinner recipe -->
+        <!-- display generated dinner recipe -->
         <Section id="recipe-info">
-            <article class="recipe-ingredients"></article>
-            <article class="recipe-steps"></article>
+            <p class="recipe-img" id="recipe-img"><span style="display:inline"><img src=""></span></p>
+            <p class="recipe-title" id="recipe-title"></p>
+            <p class="recipe-summary" id="recipe-summary"></p>
+            <p class="recipe-time" id="recipe-time"></p>
+            <p class="recipe-size" id="recipe-size"></p>
+            <p class="recipe-ingredients" id="recipe-ingredients"></p>
+            <p class="recipe-steps" id="recipe-steps"></p>
         </Section>
-
-        <!-- display image and link of generated cocktail recipe -->
+        <br>
+        <!-- display generated cocktail recipe -->
         <section class="cocktail-info">
-            <article class="cocktail-img"></article>
-            <article class="cocktail-recipe"></article>
+            <p class="cocktail-img" id="cocktail-img"><img src=""></p>
+            <p class="cocktail-title" id="cocktail-title"></p>
+            <p class="cocktail-ingredients" id="cocktail-ingredients"></p>
+            <p class="cocktail-recipe" id="cocktail-recipe"></p>
 
         </section>
         <section class="store-item">
             <input type="submit" value="Save for later !" class="save-recipe">
-            
+
         </section>
         <!-- favorites -->
         <h3>Favorites</h3>
@@ -113,7 +97,6 @@
     <footer>
         <p>©2021 You + Me </p>
         <p> Created by Natasha Harrison @natasharrison + Samuel Odubamowo @Wsamuell </p>
-        <!-- have to include a back link to Movie Database API -->
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="assets/js/script.js"></script>

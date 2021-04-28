@@ -1,68 +1,66 @@
-var renderRecipe = document.getElementById("get-recipe")
-var showRecipe = document.getElementById("recipe-info")
-
+var renderRecipe = document.getElementById("get-recipe");
+var showRecipe = document.getElementById("recipe-info");
 
 // click listener for get-recipe 
-renderRecipe.addEventListener("click", function () {
+renderRecipe.addEventListener("click", function (data) {
     // api for recipe
     fetch('https://api.spoonacular.com/recipes/random?number=1&apiKey=2edea6ac2b434b7ca50d4616af915f07')
         .then(function (response) {
             console.log(response);
             return response.json()
 
-                .then(function () {
-                    getRecipe()
+                .then(function (data) {
+                    console.log(data)
+                    displayDinnerRecipe(data);
                 })
                 
         })
-  // i seem to be missing a function to pull it into the DOM, i cant figure that out
-})
 
-
-
-
-// api fetch for cocktail recipe 
-var getCocktail = function () {
-    fetch('http://www.thecocktaildb.com/api/json/v1/1/random.php').then(function (response) {
-        console.log(response);
-        return response.json()
-    })
-
+    fetch('http://www.thecocktaildb.com/api/json/v1/1/random.php')
+        .then(function (response) {
+            console.log(response);
+            return response.json()
+    
         .then(function (data) {
             console.log(data);
+            displayCocktail(data);
         })
-};
-
-// api fetch for movie title - need to fix API link - currently just showing Fight Club
-// i dont think we can use movie api to generate just one random movie, but we might be able to use other api to generate one netflix movie or show, might be easier
-var getMovie = function () {
-    fetch('https://api.themoviedb.org/3/discover/movie/random/?api_key=6e946e614057104bc3c7b504faf122c5&language=en-US&popularity.asc').then(function (response) {
-        console.log(response);
-        return response.json()
     })
+});
 
-        .then(function (data) {
-            console.log(data);
-        })
+var displayDinnerRecipe = function (data){
+    // need to display this as an image
+    document.getElementById("recipe-img").innerHTML = data.recipes[0].image
+    document.getElementById("recipe-title").innerHTML = data.recipes[0].title
+    document.getElementById("recipe-summary").innerHTML = data.recipes[0].summary
+    document.getElementById("recipe-time").innerHTML = data.recipes[0].readyInMinutes
+    document.getElementById("recipe-size").innerHTML = data.recipes[0].servings
+    document.getElementById("recipe-ingredients").innerHTML = data.recipes[0].extendedIngredients
+    document.getElementById("recipe-steps").innerHTML = data.recipes[0].instructions
 };
 
-
-// renderRecipe();
-// getCocktail();
-// getMovie();
+var displayCocktail = function (data){
+    document.getElementById("cocktail-img").innerHTML = data.drinks[0].strDrinkThumb
+    document.getElementById("cocktail-title").innerHTML = data.drinks[0].strDrink
+    document.getElementById("cocktail-ingredients").innerHTML = data.drinks.strIngredient1
+    document.getElementById("cocktail-ingredients").innerHTML = data.drinks.strIngredient2
+    document.getElementById("cocktail-ingredients").innerHTML = data.drinks.strIngredient3
+    document.getElementById("cocktail-ingredients").innerHTML = data.drinks.strIngredient4
+    document.getElementById("cocktail-ingredients").innerHTML = data.drinks.strIngredient5
+    document.getElementById("cocktail-ingredients").innerHTML = data.drinks.strIngredient6
+    document.getElementById("cocktail-ingredients").innerHTML = data.drinks.strIngredient7
+    document.getElementById("cocktail-ingredients").innerHTML = data.drinks.strIngredient8
+    document.getElementById("cocktail-ingredients").innerHTML = data.drinks.strIngredient9
+    document.getElementById("cocktail-ingredients").innerHTML = data.drinks.strIngredient10
+    document.getElementById("cocktail-ingredients").innerHTML = data.drinks.strIngredient11
+    document.getElementById("cocktail-ingredients").innerHTML = data.drinks.strIngredient12
+    document.getElementById("cocktail-ingredients").innerHTML = data.drinks.strIngredient13
+    document.getElementById("cocktail-ingredients").innerHTML = data.drinks.strIngredient14
+    document.getElementById("cocktail-ingredients").innerHTML = data.drinks.strIngredient15
+    document.getElementById("cocktail-recipe").innerHTML = data.drinks[0].strInstructions
+};
 
 // add eventListener for the clicks on each button 
-
-// display function for dinner recipe
-//display photo of recipe 
-// display title of recipe 
-// display recipe ingredients and instructions
-
-// display function for cocktail recipe 
-//display photo of recipe 
-// display title of recipe 
-// display recipe ingredients and instructions
-
 // localStorage function to save generated recipes 
 $("save-recipe").on("click", function () {
     var renderRecipes = $(this)(".recipe-info").val();

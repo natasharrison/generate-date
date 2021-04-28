@@ -2,7 +2,7 @@
 
 ## Description
 
-Dinner date web application that randomly generates a dinner recipe, a cocktail recipe and a movie or music playlist suggestion to help take the decision-making out of date night.
+Dinner date web application that randomly generates a dinner recipe and a cocktail recipe suggestion to help take the decision-making out of date night.
 
 ## User Story
 
@@ -24,10 +24,10 @@ THEN I am again presented with the dinner recipe and the cocktail recipe
 
 - HTML
 - CSS
+- CSS Framework Skeleton http://getskeleton.com/
 - JavaScript
-- Recipe API
-- Cocktail API
-- Movie/Music API
+- Recipe API https://www.thecocktaildb.com/api.php 
+- Cocktail API https://spoonacular.com/food-api 
 
 ## Website
 
