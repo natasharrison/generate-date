@@ -46,6 +46,14 @@ main {
 .recipe-gen {
   margin-left: 200px;
 }
+#recipe-margin {
+  margin-top: 45px;
+}
+.drink-checkbox {
+  height: 20px;
+  width: 20px;
+  padding: 20px;
+}
 .store-item {
   text-align: center;
 }
