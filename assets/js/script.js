@@ -1,9 +1,10 @@
 var renderRecipe = document.getElementById("get-recipe");
 var showRecipe = document.getElementById("recipe-info");
-var addCocktail = document.getElementById("drink-checkbox").checked;
+var addCocktail = document.getElementById("drink-checkbox");
 // click listener for get-recipe 
 renderRecipe.addEventListener("click", function (data) {
-    // api for recipe
+   clearCocktails()
+
     // we should maybe think about making the API key just foods, i see alot of dessets comming up 
     fetch('https://api.spoonacular.com/recipes/random?number=1&apiKey=2edea6ac2b434b7ca50d4616af915f07')
         .then(function (response) {
@@ -14,28 +15,21 @@ renderRecipe.addEventListener("click", function (data) {
             console.log(data)
             displayDinnerRecipe(data);
 
-        if (addCocktail === true)    {}
+            console.log(addCocktail.checked)
+        if (addCocktail.checked === true) {
+            console.log("is this true")
+            fetch('http://www.thecocktaildb.com/api/json/v1/1/random.php')
+                .then(function (response) {
+                console.log(response, "cocktail");
+                return response.json()
 
-        
-
+                .then(function (data) {
+                    console.log(data);
+                    displayCocktail(data);
         })
-    
-
-
+    });}
+        })    
 });
-
-fetch('http://www.thecocktaildb.com/api/json/v1/1/random.php')
-.then(function (response) {
-    console.log(response);
-    return response.json()
-
-        .then(function (data) {
-            console.log(data);
-            displayCocktail(data);
-        })
-})
-
-
 
 var displayDinnerRecipe = function (data) {
     var recipes = data.recipes
@@ -80,13 +74,45 @@ var displayCocktail = function (data) {
     document.getElementById("cocktail-recipe").innerHTML = drinks[0].strInstructions
 };
 
-// add eventListener for the clicks on each button 
+var clearCocktails = function(){
+
+    document.getElementById("cocktail-ingredients").innerHTML = ""
+    document.getElementById("cocktail-img").innerHTML = ""
+    document.getElementById("cocktail-title").innerHTML = ""
+    document.getElementById("cocktail-recipe").innerHTML = ""
+};
+
 // localStorage function to save generated recipes 
-$("save-recipe").on("click", function () {
-    var renderRecipes = $(this)(".recipe-info").val();
-    var renderCocktails = $(this)(".cocktail-info").val();
+$(".save-recipe").on("click", function () {
+    console.log("click")
+    var favoriteFood = []
+    var currentLocalStorage = JSON.parse(localStorage.getItem("favoriteFood"))
+    var food = {foodItem: document.getElementById("recipe-title").innerHTML}
+    console.log(food)
+    
+    if (currentLocalStorage){
+        currentLocalStorage.push(food)
+        localStorage.setItem("favoriteFood", JSON.stringify(currentLocalStorage))
 
+    } else{
+        favoriteFood.push(food)
+        localStorage.setItem("favoriteFood", JSON.stringify(favoriteFood))
+    }
 
-    localStorage.setItem(renderCocktails, renderRecipes)
-    console.log(localStorage)
+    var displayLocalStorage = JSON.parse(localStorage.getItem("favoriteFood"))
+
+     for (var i = 0; i < displayLocalStorage.length; i++) {
+        var newParagraph = document.createElement("p") 
+        newParagraph.innerHTML = displayLocalStorage[i].foodItem
+        var storeItem = document.getElementsByClassName("store-item")
+        storeItem.appendChild(newParagraph)
+    }
+
+    // var renderRecipes = $(this)(".recipe-info").val();
+    // var renderCocktails = $(this)(".cocktail-info").val();
+    // localStorage.setItem(renderCocktails, renderRecipes)
+    // console.log(localStorage)
 })
+
+
+
