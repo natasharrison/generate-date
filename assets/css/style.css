@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
-  color: inherit;
   font-family: "Oswald", sans-serif;
 }
 
@@ -19,37 +18,62 @@ header {
   padding: 20px;
   background-position: center;
 }
+
 span {
   color: gold;
 }
+
 main {
   padding: 20px;
+}
+
+a:link {
+  color: var(--neutral-color);
 }
 .header-description {
   padding: 100px;
   font-style: italic;
 }
+.description {
+  text-align: center;
+}
 .how-to-title,
-#get-started {
+#get-started,
+.save-recipe {
   text-align: center;
 }
 #get-started {
   padding-top: 70px;
+}
+.banner {
+  color: var(--neutral-color);
+  background-color: var(--background-color);
+  text-align: center;
+  padding: 10px;
 }
 .fas {
   display: grid;
   font-size: 100px;
 }
 .recipe-gen {
-  margin-left: 200px;
+  text-align: center;
+}
+.recipe-title {
+  font-size: larger;
+  text-align: center;
 }
 #recipe-margin {
   margin-top: 45px;
 }
+
 .drink-checkbox {
   height: 20px;
   width: 20px;
   padding: 20px;
+}
+.cocktail-title {
+  font-size: larger;
+  text-align: center;
 }
 .store-item {
   text-align: center;
