@@ -4,6 +4,7 @@ var addCocktail = document.getElementById("drink-checkbox");
 // click listener for get-recipe 
 renderRecipe.addEventListener("click", function (data) {
    clearCocktails()
+   clearRecipe()
 
     // we should maybe think about making the API key just foods, i see alot of dessets comming up 
     fetch('https://api.spoonacular.com/recipes/random?number=1&apiKey=2edea6ac2b434b7ca50d4616af915f07')
@@ -80,6 +81,15 @@ var clearCocktails = function(){
     document.getElementById("cocktail-img").innerHTML = ""
     document.getElementById("cocktail-title").innerHTML = ""
     document.getElementById("cocktail-recipe").innerHTML = ""
+};
+
+
+var clearRecipe = function(){
+
+    // document.getElementById("cocktail-ingredients").innerHTML = ""
+    // document.getElementById("cocktail-img").innerHTML = ""
+    // document.getElementById("cocktail-title").innerHTML = ""
+    // document.getElementById("cocktail-recipe").innerHTML = ""
 };
 
 // localStorage function to save generated recipes 
