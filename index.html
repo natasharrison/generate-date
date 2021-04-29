@@ -16,22 +16,20 @@
 
 <body>
     <header class="row">
-        <div class="six columns" id="title">
-            <!-- i need to incorporate "font-family: 'Dancing Script', cursive"  into the heading -->
-            <h2 href="./index.html">You <span class="plus">+</span> Me</h2>
-        </div>
-        <Nav class="six columns" id="nav">
-            <h5 class="row">
-                <div class="four columns">
-                    <a href="#music">Music</a>
-                </div>
-                <div class="four columns">
-                    <a href="#recipe">Recipe</a>
-                </div>
-                <div class="four columns">
-                    <a href="#cocktail">Cocktail</a>
-                </div>
-            </h5>
+
+        <Nav class="twelve columns" id="nav">
+
+            <div class="eight columns" id="title">
+                <a class="title" href="./index.html">You <span class="plus">+</span> Me</a>
+            </div>
+
+            <div class="one columns">
+                <a href="#recipe">Recipe</a>
+            </div>
+            <div class="one columns">
+                <a href="#cocktail">Cocktail</a>
+            </div>
+
         </Nav>
         <h4 class="header-description">Life is full of choices, we can help make this one simple!</h4>
     </header>
@@ -39,24 +37,14 @@
     <main>
         <section class="how-to">
             <h3 class="how-to-title">How it works</h3>
-            <p class="description">Its as simple as it sounds! Take the difficult decision-making out of date night by using the random dinner and cocktail recipe
+            <p class="description">Its as simple as it sounds! Take the difficult decision-making out of date night by
+                using the random dinner and cocktail recipe
                 generator below.
             </p>
-            <!-- <ol class="container">
-                <li class="four columns">In the mood for some Music?</li>
-                <li class="four columns">Generate your food choice</li>
-                <li class="four columns">We talking cocktail?</li>
-            </ol> -->
             <h5 id="get-started" class="twelve columns">Let's get you started!</h5>
         </section>
         <!-- main function -->
-        <!-- <section id="music" class="music-gen">
-            <article class="container-md">
-                <div id="music" class="12 columns">
-                    <input type="image" src="./assets/images/music.jpg" alt="music image" class="six columns">
-                </div>
-            </article>
-        </section> -->
+        
 
         <section id="recipe" class="recipe-gen">
             <article class="container">
@@ -68,10 +56,10 @@
         <!-- display generated dinner recipe -->
 
         <Section id="recipe-info">
-            <h3 class="banner">Chow</h3>
+            <h3 class="banner">Recipe</h3>
             <p class="recipe-title" id="recipe-title"></p>
             <div class="row" id="recipe-margin">
-                <p id="recipe-img"><img class="six columns" src="" alt="" id="main-recipe-img"></p>
+                <p id="recipe-img"><img class="five columns" src="" alt="" id="main-recipe-img"></p>
                 <p class="six columns" id="recipe-summary"></p>
             </div>
             <div class="row" id="recipe-margin">
@@ -89,11 +77,12 @@
             <h3 class="banner">Cocktail</h3>
             <p class="cocktail-title" id="cocktail-title"></p>
             <div class="row">
-                <p class="six columns" id="cocktail-img"><img src="" alt="" id="pull-cocktail-img"></p>
+                <ul class="six columns" id="cocktail-ingredients"></ul>
+                <p id="cocktail-img"><img src="" alt="" id="pull-cocktail-img" class="four columns"></p>
+            </div>
             </div>
             <div class="row" id="recipe-margin">
-                <ul class="six columns" id="cocktail-ingredients"></ul>
-                <p class="six columns" id="cocktail-recipe"></p>
+                <p class="twelve columns" id="cocktail-recipe"></p>
             </div>
         </section>
 
@@ -107,11 +96,12 @@
     </main>
     <footer>
         <p>©2021 You + Me </p>
-        <p> Created by Natasha Harrison @natasharrison + Samuel Odubamowo @Wsamuell </p>
+        <p> Created by <a href="https://github.com/natasharrison">Natasha Harrison</a> <span class="plus">+</span> <a href="https://github.com/Wsamuell">Samuel Odubamowo</a></p>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="/assets/js/script.js"></script>
 </body>
 
 </html>

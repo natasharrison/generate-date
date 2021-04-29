@@ -1,35 +1,37 @@
+
 var renderRecipe = document.getElementById("get-recipe");
 var showRecipe = document.getElementById("recipe-info");
 var addCocktail = document.getElementById("drink-checkbox");
 // click listener for get-recipe 
 renderRecipe.addEventListener("click", function (data) {
-   clearCocktails()
-   clearRecipe()
+    clearCocktails()
+    clearRecipe()
 
     // we should maybe think about making the API key just foods, i see alot of dessets comming up 
-    fetch('https://api.spoonacular.com/recipes/random?number=1&apiKey=2edea6ac2b434b7ca50d4616af915f07')
+    fetch('https://api.spoonacular.com/recipes/random?number=1&apiKey=244f6569191c4800b0cd516ad81b710a')
         .then(function (response) {
             console.log(response);
             return response.json();
         })
         .then(function (data) {
-            console.log(data)
+            console.log(data.recipes[0].sourceUrl)
             displayDinnerRecipe(data);
 
             console.log(addCocktail.checked)
-        if (addCocktail.checked === true) {
-            console.log("is this true")
-            fetch('http://www.thecocktaildb.com/api/json/v1/1/random.php')
-                .then(function (response) {
-                console.log(response, "cocktail");
-                return response.json()
+            if (addCocktail.checked === true) {
+                console.log("is this true")
+                fetch('http://www.thecocktaildb.com/api/json/v1/1/random.php')
+                    .then(function (response) {
+                        console.log(response, "cocktail");
+                        return response.json()
 
-                .then(function (data) {
-                    console.log(data);
-                    displayCocktail(data);
+                            .then(function (data) {
+                                console.log(data);
+                                displayCocktail(data);
+                            })
+                    });
+            }
         })
-    });}
-        })    
 });
 
 var displayDinnerRecipe = function (data) {
@@ -75,7 +77,7 @@ var displayCocktail = function (data) {
     document.getElementById("cocktail-recipe").innerHTML = drinks[0].strInstructions
 };
 
-var clearRecipe = function(){
+var clearRecipe = function () {
     document.getElementById("recipe-ingredients").innerHTML = ""
     document.getElementById("main-recipe-img").src = ""
     document.getElementById("recipe-title").innerHTML = ""
@@ -83,7 +85,7 @@ var clearRecipe = function(){
     document.getElementById("recipe-steps").innerHTML = ""
 };
 
-var clearCocktails = function(){
+var clearCocktails = function () {
 
     document.getElementById("cocktail-ingredients").innerHTML = ""
     document.getElementById("pull-cocktail-img").src = ""
@@ -96,29 +98,31 @@ $(".save-recipe").on("click", function () {
     console.log("click")
     var favoriteFood = []
     var currentLocalStorage = JSON.parse(localStorage.getItem("favoriteFood"))
-    var food = {foodItem: document.getElementById("recipe-title").innerHTML}
+    var food = { foodItem: document.getElementById("recipe-title").innerHTML }
     console.log(food)
-    
-    if (currentLocalStorage){
+
+    if (currentLocalStorage) {
         currentLocalStorage.push(food)
         localStorage.setItem("favoriteFood", JSON.stringify(currentLocalStorage))
 
-    } else{
+    } else {
         favoriteFood.push(food)
         localStorage.setItem("favoriteFood", JSON.stringify(favoriteFood))
     }
-
-    var displayLocalStorage = JSON.parse(localStorage.getItem("favoriteFood"))
-    
-     for (var i = 0; i < displayLocalStorage.length; i++) {
-        var newSave = document.createElement("li") 
-        newSave.innerHTML = displayLocalStorage[i].foodItem
-        var storeItem = document.getElementById("store-item")
-        storeItem.appendChild(newSave)
-    }
-
-    // $(".store-item #store-item").text(displayLocalStorage.getItem(".store-item"))
 })
+var displayLocalStorage = JSON.parse(localStorage.getItem("favoriteFood"))
+
+for (var i = 0; i < displayLocalStorage.length; i++) {
+    var newSave = document.createElement("li")
+    newSave.innerHTML = displayLocalStorage[i].foodItem
+    var storeItem = document.getElementById("store-item")
+    storeItem.appendChild(newSave)
+}
+
+// spotify playlist
+
+// var request = require("request");
+// var playlist_url = 
 
 
 
