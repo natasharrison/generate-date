@@ -110,11 +110,18 @@ $(".save-recipe").on("click", function () {
 
     var displayLocalStorage = JSON.parse(localStorage.getItem("favoriteFood"))
 
+    //  for (var i = 0; i < displayLocalStorage.length; i++) {
+    //     var newParagraph = document.createElement("p") 
+    //     newParagraph.innerHTML = displayLocalStorage[i].foodItem
+    //     var storeItem = document.getElementsByClassName("store-item")
+    //     storeItem.appendChild(newParagraph)
+    // }
+    
      for (var i = 0; i < displayLocalStorage.length; i++) {
-        var newParagraph = document.createElement("p") 
-        newParagraph.innerHTML = displayLocalStorage[i].foodItem
-        var storeItem = document.getElementsByClassName("store-item")
-        storeItem.appendChild(newParagraph)
+        var newSave = document.createElement("li") 
+        newSave.innerHTML = displayLocalStorage[i].foodItem
+        var storeItem = document.getElementById("store-item")
+        storeItem.appendChild(newSave)
     }
 
     // var renderRecipes = $(this)(".recipe-info").val();
