@@ -70,7 +70,7 @@ var displayCocktail = function (data) {
         cocktailIngredients.appendChild(currentIngredient)
     }
 
-    document.getElementById("cocktail-img").innerHTML = drinks[0].strDrinkThumb
+    document.getElementById("pull-cocktail-img").src = drinks[0].strDrinkThumb
     document.getElementById("cocktail-title").innerHTML = drinks[0].strDrink
     document.getElementById("cocktail-recipe").innerHTML = drinks[0].strInstructions
 };
@@ -86,7 +86,7 @@ var clearRecipe = function(){
 var clearCocktails = function(){
 
     document.getElementById("cocktail-ingredients").innerHTML = ""
-    document.getElementById("cocktail-img").innerHTML = ""
+    document.getElementById("pull-cocktail-img").src = ""
     document.getElementById("cocktail-title").innerHTML = ""
     document.getElementById("cocktail-recipe").innerHTML = ""
 };
