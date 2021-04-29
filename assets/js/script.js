@@ -75,21 +75,20 @@ var displayCocktail = function (data) {
     document.getElementById("cocktail-recipe").innerHTML = drinks[0].strInstructions
 };
 
+var clearRecipe = function(){
+    document.getElementById("recipe-ingredients").innerHTML = ""
+    document.getElementById("main-recipe-img").src = ""
+    document.getElementById("recipe-title").innerHTML = ""
+    document.getElementById("recipe-summary").innerHTML = ""
+    document.getElementById("recipe-steps").innerHTML = ""
+};
+
 var clearCocktails = function(){
 
     document.getElementById("cocktail-ingredients").innerHTML = ""
     document.getElementById("cocktail-img").innerHTML = ""
     document.getElementById("cocktail-title").innerHTML = ""
     document.getElementById("cocktail-recipe").innerHTML = ""
-};
-
-
-var clearRecipe = function(){
-
-    // document.getElementById("cocktail-ingredients").innerHTML = ""
-    // document.getElementById("cocktail-img").innerHTML = ""
-    // document.getElementById("cocktail-title").innerHTML = ""
-    // document.getElementById("cocktail-recipe").innerHTML = ""
 };
 
 // localStorage function to save generated recipes 
