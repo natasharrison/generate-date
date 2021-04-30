@@ -20,7 +20,7 @@ renderRecipe.addEventListener("click", function (data) {
             console.log(addCocktail.checked)
             if (addCocktail.checked === true) {
                 console.log("is this true")
-                fetch('http://www.thecocktaildb.com/api/json/v1/1/random.php')
+                fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
                     .then(function (response) {
                         console.log(response, "cocktail");
                         return response.json()
