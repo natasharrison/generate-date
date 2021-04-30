@@ -32,7 +32,6 @@ THEN I am again presented with the dinner recipe and the cocktail recipe
 ## Website
 
 [GitHub] https://natasharrison.github.io/generate-date/
-[Screenshot]
 
 ## Contributions
 
@@ -44,3 +43,9 @@ THEN I am again presented with the dinner recipe and the cocktail recipe
 - incorporate a random music playlist option
 - user able to leave a review and submit a photo based off their own attempt at the given recipe
 - If you save or 'favorite' a selection, it would be added to the random array so you can get it again in the future
+
+## screenShot
+![Screenshot](./assets/images/sc-1.png)
+![Screenshot](./assets/images/sc-2.png)
+![Screenshot](./assets/images/sc-3.png)
+![Screenshot](./assets/images/sc-4.png)
